@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="destinations.xsd"?>
+<adventures xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:noNamespaceSchemaLocation="destinations.xsd">
+    <adventure>
+        <name>Rocky Mountains</name>
+        <country>USA</country>
+        <description>A beautiful range perfect for hiking and adventure.</description>
+    </adventure>
+    <adventure>
+        <name>Yellowstone National Park</name>
+        <country>USA</country>
+        <description>A vast natural area with geysers, hot springs, and camping.</description>
+    </adventure>
+    <adventure>
+        <name>Whistler</name>
+        <country>Canada</country>
+        <description>A mountain resort known for skiing and mountain biking.</description>
+    </adventure>
+</adventures>

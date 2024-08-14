@@ -1,0 +1,14 @@
+body {
+    padding-top: 56px; /* Space for the fixed navbar */
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.modal-body img {
+    max-width: 100%;
+    height: auto;
+}

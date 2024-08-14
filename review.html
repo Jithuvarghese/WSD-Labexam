@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Reviews</title>
+    <style>
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+            padding-bottom: 60px;
+        }
+        footer {
+            background-color: #343a40;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Fab Travel Blog</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html"><i class="fa-solid fa-image"></i> Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="map.html"><i class="fa-solid fa-map"></i> Map</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="review.html"><i class="fa-solid fa-star"></i> Review</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5 pt-5">
+        <h1>User Reviews</h1>
+        <form id="review-form">
+            <div class="mb-3">
+                <label for="reviewer-name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="reviewer-name" required>
+            </div>
+            <div class="mb-3">
+                <label for="review-text" class="form-label">Your Review</label>
+                <textarea class="form-control" id="review-text" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Review</button>
+        </form>
+    </main>
+
+    <footer class="footer fixed-bottom bg-dark text-white text-center py-3">
+        <p>&copy; Fab Travel Blog</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('review-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('reviewer-name').value;
+            const review = document.getElementById('review-text').value;
+
+            const reviewList = document.getElementById('review-list');
+            const reviewDiv = document.createElement('div');
+            reviewDiv.className = 'review mb-4';
+            reviewDiv.innerHTML = `<h5>${name}</h5><p>${review}</p>`;
+            reviewList.appendChild(reviewDiv);
+
+            this.reset();
+        });
+    </script>
+</body>
+</html>

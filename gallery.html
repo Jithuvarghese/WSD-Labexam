@@ -1,0 +1,130 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>      
+        <title>Gallery</title>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+            main {
+                flex: 1; 
+                padding-bottom: 60px; 
+            }
+            .gallery-image {
+            height: 300px;
+            object-fit: cover;
+            width: 100%; 
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Fab Travel Blog</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gallery.html"><i class="fa-solid fa-image"></i> Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="map.html"><i class="fa-solid fa-map"></i> Map</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="review.html"><i class="fa-solid fa-star"></i> Review</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container mt-5 pt-5">
+            <h1 class="text-center">Fab Travel Blog</h1>
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <img src="hiking.jpg" class="img-fluid gallery-image" alt="Hiking" data-bs-toggle="modal" data-bs-target="#hikingModal">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="camping.jpg" class="img-fluid gallery-image" alt="Camping" data-bs-toggle="modal" data-bs-target="#campingModal">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="extreme_sports.jpg" class="img-fluid gallery-image" alt="Extreme Sports" data-bs-toggle="modal" data-bs-target="#extremeSportsModal">
+                </div>
+            </div>
+        </main>
+        <div class="modal fade" id="hikingModal" tabindex="-1" aria-labelledby="hikingModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="hikingModalLabel">Hiking Adventure</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="hiking.jpg" class="img-fluid mb-3" alt="Hiking">
+                        <p>Location: Rocky Mountains, USA</p>
+                        <p>This hiking trip offered breathtaking views and challenging trails!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="campingModal" tabindex="-1" aria-labelledby="campingModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="campingModalLabel">Camping Adventure</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="camping.jpg" class="img-fluid mb-3" alt="Camping">
+                        <p>Location: Yellowstone National Park, USA</p>
+                        <p>A perfect weekend getaway with friends under the stars!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="extremeSportsModal" tabindex="-1" aria-labelledby="extremeSportsModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="extremeSportsModalLabel">Extreme Sports Adventure</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="extreme_sports.jpg" class="img-fluid mb-3" alt="Extreme Sports">
+                        <p>Location: Whistler, Canada</p>
+                        <p>An adrenaline-pumping experience in mountain biking!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer fixed-bottom bg-dark text-white text-center py-3">
+            <p>&copy;Fab Travel Blog</p>
+        </footer>
+
+    </body>
+    </html>
